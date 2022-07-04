@@ -32,7 +32,7 @@ var config = {
             legend: '<span style="font-size: 0.85em;"><em>Indigenous community names on the map courtesy of Native Land Digital</em></span>',
             description: 'Lorem',
             location: {
-                center: [74.272112, 15.365910],
+                center: [74.200, 15.440], 
                 zoom: 10,
                 pitch: 30,
                 bearing: 0
@@ -54,43 +54,7 @@ var config = {
                      opacity: 0,
                      //duration: 5000
                  },
-				 {
-                     layer: 'tline-alternate1',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate2',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate3',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'railwayexpansion',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 
-				 {
-                     layer: 'proposedrailwayclearance',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'railway-Impactedvillages',
-                     opacity: 0.1,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'nh4a-expansion',
-                     opacity: 0.1,
-                     //duration: 5000
-                 }
-				 
+				 	 
             ],
             onChapterExit: [
             ]
@@ -122,41 +86,6 @@ var config = {
                      layer: 'existingline',
                      opacity: 1,
                      //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate1',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate2',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate3',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'railwayexpansion',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'proposedrailwayclearance',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'railway-Impactedvillages',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'nh4a-expansion',
-                     opacity: 0,
-                     //duration: 5000
                  }
 			],
             onChapterExit: []
@@ -186,7 +115,7 @@ var config = {
                  },
 				 {
                      layer: 'existingline',
-                     opacity: 0.7,
+                     opacity: 1,
                      //duration: 5000
                  },
 				 {
@@ -203,29 +132,100 @@ var config = {
                      layer: 'tline-alternate3',
                      opacity: 1,
                      //duration: 5000
+                 }
+				 
+			],
+            onChapterExit: [
+				{
+                     layer: 'tline-alternate1',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'tline-alternate2',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'tline-alternate3',
+                     opacity: 0,
+                     //duration: 5000
+                 }
+			]
+        },
+		
+		{
+            id: 'tlinesImpact',
+            alignment: 'right',
+            hidden: false,
+            title: 'TlineExpansion',
+            image: './path/to/image/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+                center: [74.272112, 15.365910],
+                zoom: 10,
+                pitch: 30,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            mapInteractive: false,
+            callback: '',
+            onChapterEnter: [
+			{
+                     layer: 'NPboundary',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingline',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'tline-alternate1',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'tline-alternate2',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'transline-villages',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'transmission-expansion',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'tline-alternate3',
+                     opacity: 1,
+                     //duration: 5000
                  },
 				 {
                      layer: 'railwayexpansion',
                      opacity: 0,
                      //duration: 5000
-                 },
-				 {
-                     layer: 'proposedrailwayclearance',
+                 }
+			],
+            onChapterExit: [
+				{
+                     layer: 'transline-villages',
                      opacity: 0,
                      //duration: 5000
                  },
 				 {
-                     layer: 'railway-Impactedvillages',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'nh4a-expansion',
+                     layer: 'transmission-expansion',
                      opacity: 0,
                      //duration: 5000
                  }
-			],
-            onChapterExit: []
+				 
+				 ]
         },
 		
 		{
@@ -257,6 +257,10 @@ var config = {
                      //duration: 5000
                  },
 				 {
+                     layer: 'railwayexpansion',
+                     opacity: 1,
+                     //duration: 5000
+                 },{
                      layer: 'tline-alternate1',
                      opacity: 0,
                      //duration: 5000
@@ -272,22 +276,12 @@ var config = {
                      //duration: 5000
                  },
 				 {
-                     layer: 'railwayexpansion',
-                     opacity: 1,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'proposedrailwayclearance',
+                     layer: 'transline-villages',
                      opacity: 0,
                      //duration: 5000
                  },
 				 {
-                     layer: 'railway-Impactedvillages',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'nh4a-expansion',
+                     layer: 'transmission-expansion',
                      opacity: 0,
                      //duration: 5000
                  }
@@ -324,21 +318,6 @@ var config = {
                      //duration: 5000
                  },
 				 {
-                     layer: 'tline-alternate1',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate2',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate3',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
                      layer: 'railwayexpansion',
                      opacity: 1,
                      //duration: 5000
@@ -347,19 +326,16 @@ var config = {
                      layer: 'proposedrailwayclearance',
                      opacity: 1,
                      //duration: 5000
-                 },
-				 {
-                     layer: 'railway-Impactedvillages',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'nh4a-expansion',
+                 }
+				 
+			],
+            onChapterExit: [
+					{
+                     layer: 'proposedrailwayclearance',
                      opacity: 0,
                      //duration: 5000
                  }
-			],
-            onChapterExit: []
+			]
         },
 		
 		{
@@ -391,21 +367,6 @@ var config = {
                      //duration: 5000
                  },
 				 {
-                     layer: 'tline-alternate1',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate2',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate3',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
                      layer: 'railwayexpansion',
                      opacity: 1,
                      //duration: 5000
@@ -416,17 +377,21 @@ var config = {
                      //duration: 5000
                  },
 				 {
-                     layer: 'railway-Impactedvillages',
+                     layer: 'railwayimpactedvillages',
                      opacity: 1,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'nh4a-expansion',
-                     opacity: 0,
                      //duration: 5000
                  }
 			],
-            onChapterExit: []
+            onChapterExit: [
+				{
+                     layer: 'railwayimpactedvillages',
+                     opacity: 0,
+                     //duration: 5000
+                 }
+				 
+				 ]
         }
+		
+		
     ]
 };
