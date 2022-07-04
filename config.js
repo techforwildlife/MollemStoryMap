@@ -135,23 +135,7 @@ var config = {
                  }
 				 
 			],
-            onChapterExit: [
-				{
-                     layer: 'tline-alternate1',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate2',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate3',
-                     opacity: 0,
-                     //duration: 5000
-                 }
-			]
+            onChapterExit: []
         },
 		
 		{
@@ -385,6 +369,61 @@ var config = {
             onChapterExit: [
 				{
                      layer: 'railwayimpactedvillages',
+                     opacity: 0,
+                     //duration: 5000
+                 }
+				 
+				 ]
+        },
+		
+		
+		{
+            id: 'HighwayExpansion',
+            alignment: 'right',
+            hidden: false,
+            title: 'HighwayExpansion',
+            image: './path/to/image/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+                center: [74.272112, 15.365910],
+                zoom: 10,
+                pitch: 30,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            mapInteractive: false,
+            callback: '',
+            onChapterEnter: [
+			{
+                     layer: 'NPboundary',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingline',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'railwayexpansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'proposedrailwayclearance',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 1,
+                     //duration: 5000
+                 }
+			],
+            onChapterExit: [
+				{
+                     layer: 'nh4a-expansion',
                      opacity: 0,
                      //duration: 5000
                  }
