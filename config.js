@@ -79,7 +79,11 @@ var config = {
                      opacity: 0,
                      //duration: 5000
                  },
-				 	 
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 }
             ],
             onChapterExit: [
             ]
@@ -172,7 +176,12 @@ var config = {
                      layer: 'tline-alternate3',
                      opacity: 1,
                      //duration: 5000
-                 }
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
 				 
 			],
             onChapterExit: []
@@ -235,7 +244,17 @@ var config = {
                      layer: 'railwayexpansion',
                      opacity: 0,
                      //duration: 5000
-                 }
+                 },
+				 {
+                     layer: 'existingrail',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
 			],
             onChapterExit: [
 				{
@@ -247,7 +266,9 @@ var config = {
                      layer: 'transmission-expansion',
                      opacity: 0,
                      //duration: 5000
-                 }
+                 },
+				 
+				
 				 
 				 ]
         },
@@ -260,9 +281,9 @@ var config = {
             image: './path/to/image/source.png',
             description: '<p>CEC - comments stating that the railway expansion does not benefit goa ;</p> <p>Locals perspective on coal and why the expansion will encourage more coal evacuation and create more issues for the public </p>',
             location: {
-                center: [74.272112, 15.365910],
-                zoom: 10,
-                pitch: 30,
+                center: [74.281697, 15.333313],
+                zoom: 11,
+                pitch: 20,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
@@ -281,7 +302,7 @@ var config = {
                      //duration: 5000
                  },
 				 {
-                     layer: 'railwayexpansion',
+                     layer: 'existingrail',
                      opacity: 1,
                      //duration: 5000
                  },{
@@ -308,7 +329,22 @@ var config = {
                      layer: 'transmission-expansion',
                      opacity: 0,
                      //duration: 5000
-                 }
+                 },
+				 {
+                     layer: 'proposedrailwayclearance',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'railwayexpansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
 			],
             onChapterExit: []
         },
@@ -321,9 +357,9 @@ var config = {
             image: './path/to/image/source.png',
             description: '<p>Why is there a new railway line proposed when there is an existing line?</p><p>Why has work started on one section of the railway line when they have not got clearance for the section in the forest</p>',
             location: {
-                center: [74.272112, 15.365910],
-                zoom: 10,
-                pitch: 30,
+                center: [74.281697, 15.333313],
+                zoom: 11,
+                pitch: 20,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
@@ -342,6 +378,11 @@ var config = {
                      //duration: 5000
                  },
 				 {
+                     layer: 'existingrail',
+                     opacity: 0.5,
+                     //duration: 5000
+                 },
+				 {
                      layer: 'railwayexpansion',
                      opacity: 1,
                      //duration: 5000
@@ -350,15 +391,16 @@ var config = {
                      layer: 'proposedrailwayclearance',
                      opacity: 1,
                      //duration: 5000
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
                  }
 				 
 			],
             onChapterExit: [
-					{
-                     layer: 'proposedrailwayclearance',
-                     opacity: 0,
-                     //duration: 5000
-                 }
+					
 			]
         },
 		
@@ -391,7 +433,17 @@ var config = {
                      //duration: 5000
                  },
 				 {
+                     layer: 'originalhighway',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
                      layer: 'railwayexpansion',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingrail',
                      opacity: 1,
                      //duration: 5000
                  },
@@ -404,6 +456,11 @@ var config = {
                      layer: 'railwayimpactedvillages',
                      opacity: 1,
                      //duration: 5000
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
                  }
 			],
             onChapterExit: [
@@ -411,7 +468,22 @@ var config = {
                      layer: 'railwayimpactedvillages',
                      opacity: 0,
                      //duration: 5000
-                 }
+                 },
+				 /*{
+                     layer: 'railwayexpansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingrail',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'proposedrailwayclearance',
+                     opacity: 0,
+                     //duration: 5000
+                 }*/
 				 
 				 ]
         },
@@ -419,16 +491,83 @@ var config = {
 		
 		{
             id: 'HighwayExpansion',
-            alignment: 'right',
+            alignment: 'left',
+            hidden: false,
+            title: 'Original Highway',
+            image: './path/to/image/source.png',
+            description: '<p>The state’s argument is that there are accidents and increase in traffic therefore the highway needs to be expanded. However MPT has made statements to the public stating that the highway expansion will help move coal from MPT to Karnataka Conclusion : Court update, project status right now</p>',
+            location: {
+                center: [74.248283, 15.408438],
+                zoom: 12.5,
+                pitch: 15,
+                bearing: 10
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            mapInteractive: false,
+            callback: '',
+            onChapterEnter: [
+			{
+                     layer: 'NPboundary',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingline',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'railwayexpansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'proposedrailwayclearance',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'originalhighway',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingrail',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 
+				 
+			],
+            onChapterExit: [
+				{
+                     layer: 'nh4a-expansion',
+                     opacity: 0.7,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'railwayexpansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 
+				 ]
+        },
+		
+		
+		{
+            id: 'HighwayExpansion',
+            alignment: 'left',
             hidden: false,
             title: 'Proposed Highway expansion',
             image: './path/to/image/source.png',
             description: '<p>The state’s argument is that there are accidents and increase in traffic therefore the highway needs to be expanded. However MPT has made statements to the public stating that the highway expansion will help move coal from MPT to Karnataka Conclusion : Court update, project status right now</p>',
             location: {
-                center: [74.272112, 15.365910],
-                zoom: 10,
-                pitch: 30,
-                bearing: 0
+                center: [74.248283, 15.408438],
+                zoom: 12.5,
+                pitch: 15,
+                bearing: 10
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -459,10 +598,21 @@ var config = {
                      layer: 'nh4a-expansion',
                      opacity: 1,
                      //duration: 5000
-                 }
+                 },
+				 {
+                     layer: 'originalhighway',
+                     opacity: 0.5,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingrail',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 
 			],
             onChapterExit: [
-				{
+				 {
                      layer: 'nh4a-expansion',
                      opacity: 0,
                      //duration: 5000
@@ -475,6 +625,7 @@ var config = {
 				 
 				 ]
         },
+		
 		
 		{
             id: 'Conclusion',
@@ -485,7 +636,7 @@ var config = {
             description: '<p>What is happening at Mollem now ? </p>',
             location: {
                 center: [74.272112, 15.365910],
-                zoom: 10,
+                zoom: 11,
                 pitch: 30,
                 bearing: 0
             },
@@ -516,6 +667,16 @@ var config = {
                  },
 				 {
                      layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'originalhighway',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingrail',
                      opacity: 0,
                      //duration: 5000
                  }
