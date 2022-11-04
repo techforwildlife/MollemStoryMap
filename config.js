@@ -20,6 +20,53 @@ var config = {
     mobileview: '<div id="rotate-mobile"><em>For optimal viewing of this storytelling map on mobile, rotate your device to a horizontal orientation.</em><br><br><img src="images/device.png">', // to add custom messaging in the header for mobile devices
     footer: 'Source: source citations, etc.<br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
+	
+		{
+            id: 'Goa Boundary',
+            alignment: 'left',
+            hidden: false,
+            title: 'Goa',
+            image: './path/to/image/source.png',
+            description: 'Goa is home to a wealth of biodiversity, in its dense forests, meandering rivers and long coastal stretches. At the heart of Goa’s forests lie Mollem National Park and Bhagwan Mahavir Wildlife Sanctuary, together known  simply as Mollem. They are a vital piece connecting the other protected areas that comprise the UNESCO world heritage site that is the Western Ghats. ',
+            location: {
+                center: [73.971999, 15.574664],
+                zoom: 8,
+                pitch: 10,
+                bearing: 5
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            mapInteractive: false,
+            callback: '',
+            onChapterEnter: [
+			{
+                     layer: 'NPboundary',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingline',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: '3translines',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'sangod',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'goabounds',
+                     opacity: 1,
+                     //duration: 5000
+                 }
+			],
+            onChapterExit: []
+        },
         {
             id: 'NpBoundary',
             alignment: 'left',
@@ -30,11 +77,11 @@ var config = {
             website: '<a href="https://www.native-land.ca" target="_blank">Native Land website</a>',
             author: 'Rudo Kemper, Digital Democracy',
             legend: '<span style="font-size: 0.85em;"><em>Indigenous community names on the map courtesy of Native Land Digital</em></span>',
-            description: '<p>Goa is home to a wealth of biodiversity found in its dense forests, meandering rivers and long stretches of coast. At the heart of Goa’s forests lies Mollem National Park and Bhagwan Mahavir Wildlife Sanctuary that connect the other protected areas along the UNESCO world heritage site that is the Western Ghats.<p><p>During the pandemic when physical distancing was mandated, The Ministry of Environment, Forests and Climate Change (MoEF&CC) adapted to the restrictions by use of technology, moving to virtual platforms for clearances of large infrastructure projects. Among these clearances were 3 infrastructure projects in Goa namely widening of railway line, highway road widening and laying of a power transmission line through Goa’s primary protected areas, Mollem National Park and Bhagwan Mahavir Wildlife Sanctuary. Over 147 scientists, lawyers, ecologists and artists wrote to the NBWL ( National Board for Wildlife) and the MoEF&CC expressing concern that the NHA4 highway report was shoddily done, transmission line EIA was not accessible in public domain and that there was a need to conduct a cumulative Environmental Impact Assessment of the impact of all three projects, that could not be looked at in isolation. The clearances sparked public outcry which led to the formulation of a citizen led campaign called Amche Mollem which was aimed at protecting the forests from the three projects. Two years on, due to the efforts of lawyers, ecologists, students, artists, planners, scientists, politicians and writers, the campaign has managed to stall the projects and demand the Goa Government formulate policies for the increased protection of the forests.<p> ',
+            description: '<p>At the start of the pandemic, the Ministry of Environment, Forests and Climate Change (MoEF&CC) provided forest clearance permission to <a href="https://indianexpress.com/article/india/railway-line-to-road-centre-clears-3-projects-goa-board-says-we-were-used-as-puppets-6487716/" target="_blank">three distinct linear infrastructure projects in Goa</a> that cut through Mollem. These projects consisted of laying an additional track along an existing railway line, the widening of an existing highway and the laying of a new power transmission line through pristine forest. Together, these three projects would result in the fragmentation of this critically important part of the Western Ghats.</p><p> <a href = "https://www.thecitizen.in/index.php/en/NewsDetail/index/13/19098/Mollem:-Lawyers-Highlight-Illegalities-Contradictions-in-Clearances-to-Infra-Projects--" target="_blank">Over 147 scientists, lawyers, ecologists and artists wrote to the National Board for Wildlife (NBWL)  and the MoEF&CC</a>, expressing their concern about the individual and cumulative impact of these projects on Mollem, on Goa and on the Western Ghats. In addition, the provision of these clearances by the government sparked a public outcry which culminated in the formulation of the <a href="https://www.instagram.com/mymollem.goa/?hl=en" target="_blank">Amche Mollem</a> campaign, whose mission was to protect Goa’s forests, and Goa’s future, from these three ill-planned projects. Two years after the initiation of the campaign, the combined efforts of lawyers, ecologists, students, artists, planners, scientists, politicians and writers has resulted in a <a href="https://www.heraldgoa.in/News-Today/Supreme-Court-cancels-NBWL-clearance-for-Railway-Double-Tracking/189502" target="_blank">halt to these projects</a>.</p> ',
             location: {
                 center: [74.200, 15.440], 
                 zoom: 10,
-                pitch: 30,
+                pitch: 10,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
@@ -55,20 +102,33 @@ var config = {
                      //duration: 5000
                  },
 				 {
-                     layer: 'tline-alternate1',
-                     opacity: 0,
+                     layer: '3translines',
+                     opacity: 1,
                      //duration: 5000
                  },
 				 {
-                     layer: 'tline-alternate2',
-                     opacity: 0,
+                     layer: 'railwayexpansion',
+                     opacity: 1,
                      //duration: 5000
                  },
 				 {
-                     layer: 'tline-alternate3',
-                     opacity: 0,
+                     layer: 'proposedrailwayclearance',
+                     opacity: 1,
                      //duration: 5000
                  },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'sangod',
+                     opacity: 0,
+                     //duration: 5000
+                 }
+            ],
+            onChapterExit: [
+				
 				 {
                      layer: 'railwayexpansion',
                      opacity: 0,
@@ -84,63 +144,16 @@ var config = {
                      opacity: 0,
                      //duration: 5000
                  }
-            ],
-            onChapterExit: [
             ]
         },
-        /*{
-            id: 'existing Line',
-            alignment: 'right',
-            hidden: false,
-            title: 'Existing Transmission Line',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {
-                center: [74.272112, 15.365910],
-                zoom: 10,
-                pitch: 30,
-                bearing: 10
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            mapInteractive: false,
-            callback: '',
-            onChapterEnter: [
-			{
-                     layer: 'NPboundary',
-                     opacity: 1,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'existingline',
-                     opacity: 1,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate1',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate2',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate3',
-                     opacity: 0,
-                     //duration: 5000
-                 }
-			],
-            onChapterExit: []
-        },*/
+        
 		{
             id: 'tlinesAll',
             alignment: 'right',
             hidden: false,
             title: 'Existing & Alternate Transmission Lines',
-            image: './path/to/image/source.png',
-            description: 'The Second large infrastructure project that was cleared during the lockdown was the 400k transmission line between Tamnar in Chhattisgarh and Goa. This was one of the first projects discovered by people on ground as Sterlite had cut more than 16,000 trees at a place called Sangod, to make way for a substation, which is a node through which the 400k transmission line would decentralise into other power lines across Goa. ( we can include an image of the tree cutting at Sangod). Visuals of the trees being cut resulted in much public outrage and also led to a case against the project proponents for the illegal destruction of the trees. Due to pressure from the citizen campaign as well as legal action by The Goa Foundation, the Central Empowered Committee of the Supreme Court strongly recommended that the new 400 k transmission line be constructed over the old 110 k and 220 k lines. This would mean that the new line would not cut through fresh forest but would instead be built on the old defunct lines as well as be built high enough so that they are above the forest canopy and therefore does not disturb the forest.',
+            image: 'D:/MollemMaps&Story/Mollem/mapbox-storytelling-upgraded-main/src/images/Sangod.png',
+            description: 'The first project of the three projects discovered by the people on ground in Goa was the 400k transmission line between Tamnar in Chhattisgarh and Goa. Sterlite had cut more than 16,000 trees at a place called Sangod, to make way for a substation, which is a node through which the 400k transmission line would decentralise into other power lines across Goa. <a href="http://epaper.heraldgoa.in/articlepage.php?articleid=OHERALDO_GOA_20211208_5_2&width=266px&edition=oHeraldo&curpage=5" target="_blank">Visuals of the trees being cut resulted in much public outrage and also led to a case against the project proponents for the illegal destruction of the trees.</a></p><p> Due to pressure from the citizen’s campaign as well as legal action by <a href="http://goafoundation.org/" target="_blank">The Goa Foundation, the Central Empowered Committee of the Supreme Court strongly recommended</a> that the new 400 k transmission line be constructed over the old 110 k and 220 k lines. This would mean that the new line would not cut through fresh forest but would instead be built on the old defunct lines as well as be built high enough so that they are above the forest canopy and therefore does not disturb the forest. <a href="https://timesofindia.indiatimes.com/city/goa/sc-quashes-railways-nod-for-mollem-double-tracking/articleshow/91452397.cms" target="_blank">SC verdict that accepted the CEC findings on the line.</a></p> ',
             location: {
                 center: [74.272112, 15.365910],
                 zoom: 10,
@@ -163,17 +176,12 @@ var config = {
                      //duration: 5000
                  },
 				 {
-                     layer: 'tline-alternate1',
+                     layer: 'sangod',
                      opacity: 1,
                      //duration: 5000
                  },
-				 {
-                     layer: 'tline-alternate2',
-                     opacity: 1,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate3',
+				{
+                     layer: '3translines',
                      opacity: 1,
                      //duration: 5000
                  },
@@ -192,8 +200,8 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Impact of Expansion',
-            image: './path/to/image/source.png',
-            description: 'There is anecdotal evidence from villagers who live near the old 220 and 110 k transmission lines to say that the power lines were viewed as dangerous. On one account a villager stated that one of the local cattle was electrocuted as one power line snapped during a monsoon storm.</p><p>Villagers who have their fields below the lines fear for their lies and often prefer to not work in the fields that are below the line.The villagers fear that there will be an increase in risk with the development of the 400 k line which is also set to move through the villages bordering the sanctuary.</p><p>In another incident, an areca nut farmer stated that his entire farm as well as a few neighbouring farms will have to be cut down as the line would pass over their farms. The farmers would then have to apply for compensation from the government, however this compensation will not be able to support them financially as it does not compare to the value of their farms.</p>',
+            image: '',
+            description: '<p>The proposed project cuts through 30 villages in Goa, crossing 9 rivers, agricultural fields and mangroves. (info from this <a href="https://docs.google.com/document/d/1G3W7Wli9VXMppMcWlcoJdl2VP1G2k3im70b25YQIvBU/edit?usp=sharing" target="_blank">research report to CEC).</a></p><p> There is anecdotal evidence from villagers who live near the old 220 and 110 k transmission lines to say that the power lines were viewed as dangerous. On one account a villager stated that one of the local cattle was electrocuted as one power line snapped during a monsoon storm. Villagers who have their fields below the lines fear for their lives and often prefer to not work in the fields that are below the line.</p><p>The villagers fear that there will be an increase in risk with the development of the 400 k line which is also set to move through the villages bordering the sanctuary.</p><p>In another incident, an areca nut farmer stated that his entire farm as well as a few neighbouring farms will have to be cut down as the line would pass over their farms. The farmers would then have to apply for compensation from the government, however this compensation will not be able to support them financially as it does not compare to the value of their farms.</p> ',
             location: {
                 center: [74.272112, 15.365910],
                 zoom: 10,
@@ -215,13 +223,8 @@ var config = {
                      opacity: 1,
                      //duration: 5000
                  },
-				 {
-                     layer: 'tline-alternate1',
-                     opacity: 1,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate2',
+				{
+                     layer: '3translines',
                      opacity: 1,
                      //duration: 5000
                  },
@@ -235,11 +238,7 @@ var config = {
                      opacity: 1,
                      //duration: 5000
                  },
-				 {
-                     layer: 'tline-alternate3',
-                     opacity: 1,
-                     //duration: 5000
-                 },
+				 
 				 {
                      layer: 'railwayexpansion',
                      opacity: 0,
@@ -305,18 +304,9 @@ var config = {
                      layer: 'existingrail',
                      opacity: 1,
                      //duration: 5000
-                 },{
-                     layer: 'tline-alternate1',
-                     opacity: 0,
-                     //duration: 5000
                  },
 				 {
-                     layer: 'tline-alternate2',
-                     opacity: 0,
-                     //duration: 5000
-                 },
-				 {
-                     layer: 'tline-alternate3',
+                     layer: '3translines',
                      opacity: 0,
                      //duration: 5000
                  },
@@ -345,6 +335,11 @@ var config = {
                      opacity: 0,
                      //duration: 5000
                  },
+				 {
+                     layer: 'sangod',
+                     opacity: 0,
+                     //duration: 5000
+                 }
 			],
             onChapterExit: []
         },
@@ -410,7 +405,7 @@ var config = {
             hidden: false,
             title: 'Impact of Railway Expansion',
             image: './path/to/image/source.png',
-            description: 'Coal pollution, damage to properties, a lot of the houses that will be damaged for the line are heritage structures',
+            description: 'Coal pollution, damage to properties, a lot of the houses that will be damaged for the line are heritage structures. Link to be included.',
             location: {
                 center: [74.272112, 15.365910],
                 zoom: 10,
