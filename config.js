@@ -73,10 +73,10 @@ var config = {
             hidden: false,
             title: 'Welcome to Mollem, Goa',
             image: './path/to/image/source.png',
-            caption: 'Source image caption',
-            website: '<a href="https://www.native-land.ca" target="_blank">Native Land website</a>',
-            author: 'Rudo Kemper, Digital Democracy',
-            legend: '<span style="font-size: 0.85em;"><em>Indigenous community names on the map courtesy of Native Land Digital</em></span>',
+            //caption: 'Source image caption',
+            //website: '<a href="https://www.native-land.ca" target="_blank">Native Land website</a>',
+            //author: 'Rudo Kemper, Digital Democracy',
+            legend: '<span style="font-size: 0.85em;"><em>LEGEND can be added here</em></span>',
             description: '<p>At the start of the pandemic, the Ministry of Environment, Forests and Climate Change (MoEF&CC) provided forest clearance permission to <a href="https://indianexpress.com/article/india/railway-line-to-road-centre-clears-3-projects-goa-board-says-we-were-used-as-puppets-6487716/" target="_blank">three distinct linear infrastructure projects in Goa</a> that cut through Mollem. These projects consisted of laying an additional track along an existing railway line, the widening of an existing highway and the laying of a new power transmission line through pristine forest. Together, these three projects would result in the fragmentation of this critically important part of the Western Ghats.</p><p> <a href = "https://www.thecitizen.in/index.php/en/NewsDetail/index/13/19098/Mollem:-Lawyers-Highlight-Illegalities-Contradictions-in-Clearances-to-Infra-Projects--" target="_blank">Over 147 scientists, lawyers, ecologists and artists wrote to the National Board for Wildlife (NBWL)  and the MoEF&CC</a>, expressing their concern about the individual and cumulative impact of these projects on Mollem, on Goa and on the Western Ghats. In addition, the provision of these clearances by the government sparked a public outcry which culminated in the formulation of the <a href="https://www.instagram.com/mymollem.goa/?hl=en" target="_blank">Amche Mollem</a> campaign, whose mission was to protect Goa’s forests, and Goa’s future, from these three ill-planned projects. Two years after the initiation of the campaign, the combined efforts of lawyers, ecologists, students, artists, planners, scientists, politicians and writers has resulted in a <a href="https://www.heraldgoa.in/News-Today/Supreme-Court-cancels-NBWL-clearance-for-Railway-Double-Tracking/189502" target="_blank">halt to these projects</a>.</p> ',
             location: {
                 center: [74.200, 15.440], 
@@ -152,7 +152,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Existing & Alternate Transmission Lines',
-            image: 'D:/MollemMaps&Story/Mollem/mapbox-storytelling-upgraded-main/src/images/Sangod.png',
+            image: 'images/Sangod.png',
             description: 'The first project of the three projects discovered by the people on ground in Goa was the 400k transmission line between Tamnar in Chhattisgarh and Goa. Sterlite had cut more than 16,000 trees at a place called Sangod, to make way for a substation, which is a node through which the 400k transmission line would decentralise into other power lines across Goa. <a href="http://epaper.heraldgoa.in/articlepage.php?articleid=OHERALDO_GOA_20211208_5_2&width=266px&edition=oHeraldo&curpage=5" target="_blank">Visuals of the trees being cut resulted in much public outrage and also led to a case against the project proponents for the illegal destruction of the trees.</a></p><p> Due to pressure from the citizen’s campaign as well as legal action by <a href="http://goafoundation.org/" target="_blank">The Goa Foundation, the Central Empowered Committee of the Supreme Court strongly recommended</a> that the new 400 k transmission line be constructed over the old 110 k and 220 k lines. This would mean that the new line would not cut through fresh forest but would instead be built on the old defunct lines as well as be built high enough so that they are above the forest canopy and therefore does not disturb the forest. <a href="https://timesofindia.indiatimes.com/city/goa/sc-quashes-railways-nod-for-mollem-double-tracking/articleshow/91452397.cms" target="_blank">SC verdict that accepted the CEC findings on the line.</a></p> ',
             location: {
                 center: [74.272112, 15.365910],
