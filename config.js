@@ -13,12 +13,12 @@ var config = {
     useCustomLayers: false, //set true for enabling custom layers from sources.js
     bookmarks: true,
     chapterReturn: true,
-    title: 'The Story of Mollem, Goa',
+    title: 'Saving Mollem (2020-22)',
     logo: '',
-    subtitle: 'A descriptive and interesting subtitle to draw in the reader',
-    byline: 'By a Digital Storyteller',
-    mobileview: '<div id="rotate-mobile"><em>For optimal viewing of this storytelling map on mobile, rotate your device to a horizontal orientation.</em><br><br><img src="images/device.png">', // to add custom messaging in the header for mobile devices
-    footer: 'Source: source citations, etc.<br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    subtitle: 'A storymap depicting the three linear infrastructure projects that threaten Mollem National Park',
+    byline: 'by Technology for Wildlife Foundation',
+    mobileview: '<div id="rotate-mobile"><em>To view this storymap on a mobile device, we recommend that you rotate your device to a horizontal orientation.</em><br><br><img src="images/device.png">', // to add custom messaging in the header for mobile devices
+    footer: 'Source: OpenStreetMap.com, PARIVESH, DataMeet<br> Created using the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
 	
 		{
