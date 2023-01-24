@@ -84,7 +84,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Welcome to Mollem, Goa',
-            image: './path/to/image/source.png',
+            //image: './path/to/image/source.png',
             //caption: 'Source image caption',
             //website: '<a href="https://www.native-land.ca" target="_blank">Native Land website</a>',
             //author: 'Rudo Kemper, Digital Democracy',
@@ -159,7 +159,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Proposed infrastructure in Mollem',
-            image: './path/to/image/source.png',
+            //image: './path/to/image/source.png',
             //caption: 'Source image caption',
             //website: '<a href="https://www.native-land.ca" target="_blank">Native Land website</a>',
             //author: 'Rudo Kemper, Digital Democracy',
@@ -390,7 +390,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Existing Railway Line',
-            image: './path/to/image/source.png',
+            //image: './path/to/image/source.png',
             description: '<p>CEC - comments stating that the railway expansion does not benefit goa ;</p> <p>Locals perspective on coal and why the expansion will encourage more coal evacuation and create more issues for the public </p>',
             location: {
                 center: [74.281697, 15.333313],
@@ -462,7 +462,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Proposed Railway Double tracking',
-            image: './path/to/image/source.png',
+            //image: './path/to/image/source.png',
             description: '<p>Why is there a new railway line proposed when there is an existing line?</p><p>Why has work started on one section of the railway line when they have not got clearance for the section in the forest</p>',
             location: {
                 center: [74.281697, 15.333313],
@@ -522,7 +522,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Impact of Railway Expansion',
-            image: './path/to/image/source.png',
+            //image: './path/to/image/source.png',
             description: '<p>Coal pollution, damage to properties, a lot of the houses that will be damaged for the line are heritage structures.<a href="https://docs.google.com/document/d/1yAkkxvMFBmd2i2vUICKQrL6pKkXxTCDO/edit?usp=sharing&ouid=100767998846585455894&rtpof=true&sd=true" target="_blank">(The rail impact report)</a></p><p>The railway lines are intended to travel through densely inhabited places like Margao, Vasco da Gama, Majorda, Cansaulim, as well as several villages, large forest areas, and waterfalls along the Zuari and Dudhsagar Rivers. The double tracking of the railway line could have an effect on 132 sites in all, and many more could be discovered with careful study.1</p><p>The proposal of Sagarmala Project for coal handling expansion include expanding the roadway, adding double-tracking, and increasing coal handling at Mormugao Port Trust. On the basis of the scientific literature and the research given, it can be determined that the double tracking will predominantly have a detrimental impact on the lives of the locals.2</p><p><a href="https://www.thecitizen.in/index.php/en/NewsDetail/index/13/19577/Goa-Not-A-Coal-Hub:-Protestors-Block-Railway-Track-in-Midnight-Protests--" target="_blank">On November 1st, 2020, a large group gathered to oppose the South Western Railways\' double-tracking project at the railway track in Chandor, South Goa</a>.Demonstrators protested against the project alleging that it would endanger the lives and the biological variety of the state; while transforming Goa a coal transportation hub, only in favour of large coal companies. <a href="https://docs.google.com/document/d/1yAkkxvMFBmd2i2vUICKQrL6pKkXxTCDO/edit?usp=sharing&ouid=111925923218539479916&rtpof=true&sd=true" target="_blank">Click here to learn more</a></p>',
             location: {
                 center: [74.272112, 15.365910],
@@ -612,7 +612,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'NH748 - National Highway through Mollem',
-            image: './path/to/image/source.png',
+            //image: './path/to/image/source.png',
             description: '<p>The state’s argument is that there are accidents and increase in traffic therefore the highway needs to be expanded. However MPT has made statements to the public stating that the highway expansion will help move coal from MPT to Karnataka Conclusion : Court update, project status right now</p>',
             location: {
                 center: [74.248283, 15.408438],
@@ -679,7 +679,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Proposed Highway expansion',
-            image: './path/to/image/source.png',
+            //image: './path/to/image/source.png',
             description: '<p>The state’s argument is that there are accidents and increase in traffic therefore the highway needs to be expanded. ( (we are also actively refuting this argument - since there isn’t a local people’s perspective here perhaps we can mention that on the <a href="https://docs.google.com/document/d/1ilCup3tn4IbkZrAuKcFfn8RywUKAje7dDIdyN57LWGc/edit#heading=h.6gan6vswokzf" target="_blank">Karnataka side they are not diverting protected forest</a> to expand the highway and sticking to the existing road + that alternate routes that don’t cut through forest exist). However MPT has made statements to the public stating that the highway expansion will help move coal from MPT to Karnataka</p><p>Approximately 13 km of the 153 km state-proposed Highway 4A/NH748 from Belagavi to Panjim falls within the Mollem National Park and Bhagwan Mahaveer Wildlife Sanctuary. The programme translates to for the removal of 12,097 trees and the diversion of around 31.015 ha. of protected forest land in Goa. A new highway is required to ’meet the increased demands of traffic in the area and to reduce travel time, fuel requirements and pollution.’ - according to the state, but this argument falls short. Environmentalists have emphasised the availability of other, shorter routes outside of the area with a high biodiversity and the absence of assessment of "induced demand," which would also result in increased transportation costs, in a letter to the CEC.</p>',
             location: {
                 center: [74.248283, 15.408438],
@@ -747,7 +747,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Closing thoughts',
-            image: './path/to/image/source.png',
+            //image: './path/to/image/source.png',
             description: '<p>What is happening at Mollem now ? </p>',
             location: {
                 center: [74.272112, 15.365910],
