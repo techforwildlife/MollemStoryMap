@@ -215,7 +215,7 @@ var config = {
                  },
 				 {
                      layer: 'bounds',
-                     opacity: 0.3,
+                     opacity: 0.5,
                      //duration: 5000
                  }
             ],
@@ -246,7 +246,7 @@ var config = {
             title: 'Existing & Alternate Transmission Lines',
             image: 'images/Sangod.png',
             legend: '<span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #895b29; "></span><span>  Existing Transmission Line</span></br><span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #ff0000; "></span><span>  Proposed transmission Lines</span></br><span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #ecc14b; "></span><span> Proposed Transmission towers</span>',
-			description: 'The first project of the three projects discovered by the people on ground in Goa was the 400k transmission line between Tamnar in Chhattisgarh and Goa. Sterlite had cut more than 16,000 trees at a place called Sangod, to make way for a substation, which is a node through which the 400k transmission line would decentralise into other power lines across Goa. <a href="http://epaper.heraldgoa.in/articlepage.php?articleid=OHERALDO_GOA_20211208_5_2&width=266px&edition=oHeraldo&curpage=5" target="_blank">Visuals of the trees being cut resulted in much public outrage and also led to a case against the project proponents for the illegal destruction of the trees.</a></p><p> Due to pressure from the citizen’s campaign as well as legal action by <a href="http://goafoundation.org/" target="_blank">The Goa Foundation, the Central Empowered Committee of the Supreme Court strongly recommended</a> that the new 400 k transmission line be constructed over the old 110 k and 220 k lines. This would mean that the new line would not cut through fresh forest but would instead be built on the old defunct lines as well as be built high enough so that they are above the forest canopy and therefore does not disturb the forest. <a href="https://timesofindia.indiatimes.com/city/goa/sc-quashes-railways-nod-for-mollem-double-tracking/articleshow/91452397.cms" target="_blank">SC verdict that accepted the CEC findings on the line.</a></p> ',
+			description: 'The first project of the three projects discovered by the people on ground in Goa was the 400k transmission line between Tamnar in Chhattisgarh and Goa. Sterlite had cut more than 16,000 trees at a place called Sangod, to make way for a substation, which is a node through which the 400k transmission line would decentralise into other power lines across Goa. <a href="http://epaper.heraldgoa.in/articlepage.php?articleid=OHERALDO_GOA_20211208_5_2&width=266px&edition=oHeraldo&curpage=5" target="_blank">Visuals of the trees being cut resulted in much public outrage and also led to a case against the project proponents for the illegal destruction of the trees.</a></p>',
             location: {
                 center: [74.308042,15.369271],
                 zoom: 10.5,
@@ -261,7 +261,7 @@ var config = {
             onChapterEnter: [
 			{
                      layer: 'bounds',
-                     opacity: 0.3,
+                     opacity: 0.5,
                      //duration: 5000
                  },
 				 {
@@ -293,6 +293,80 @@ var config = {
                      layer: 'infralabels',
                      opacity: 0,
                      //duration: 5000
+                 },
+				 {
+                     layer: 'transline-villages',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+			],
+            onChapterExit: [
+			/*{
+                     layer: 'sangod',
+                     opacity: 0,
+                     //duration: 5000
+                 },*/]
+        },
+		
+		{
+            id: 'tlinesAll',
+            alignment: 'right',
+            hidden: false,
+            //title: 'Existing & Alternate Transmission Lines',
+            image: 'images/Sangod.png',
+            legend: '<span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #895b29; "></span><span>  Existing Transmission Line</span></br><span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #ff0000; "></span><span>  Proposed transmission Lines</span></br><span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #ecc14b; "></span><span> Proposed Transmission towers</span>',
+			description: '<p> Due to pressure from the citizen’s campaign as well as legal action by <a href="http://goafoundation.org/" target="_blank">The Goa Foundation</a>, the Central Empowered Committee of the Supreme Court strongly recommended that the new 400 k transmission line be constructed over the old 110 k and 220 k lines. This would mean that the new line would not cut through fresh forest but would instead be built on the old defunct lines as well as be built high enough so that they are above the forest canopy and therefore does not disturb the forest. <a href="https://timesofindia.indiatimes.com/city/goa/sc-quashes-railways-nod-for-mollem-double-tracking/articleshow/91452397.cms" target="_blank">SC verdict that accepted the CEC findings on the line.</a></p> ',
+            location: {
+                center: [74.308042,15.369271],
+                zoom: 10.5,
+                pitch: 10,
+                bearing: 0
+            },
+			
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            mapInteractive: false,
+            callback: '',
+            onChapterEnter: [
+			{
+                     layer: 'bounds',
+                     opacity: 0.5,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingline',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'sangod',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				{
+                     layer: 'alternate',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'transline-villages',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'towers',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'infralabels',
+                     opacity: 0,
+                     //duration: 5000
                  }
 			],
             onChapterExit: [
@@ -301,7 +375,7 @@ var config = {
                      opacity: 0,
                      //duration: 5000
                  },]
-        },
+		},
 		
 		{
             id: 'tlinesImpact',
@@ -310,7 +384,7 @@ var config = {
             title: 'Impact of Expansion',
             image: '',
             legend: '<span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #72f8ed; "></span><span> Impacted Villages</span></br><span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #ecc14b; "></span><span> Proposed Transmission towers</span>',
-			description: '<p>There are 18 communities with ten or more structures each, 13 houses of worship, including the ASI-protected Tambi Surla temple, at least 11 businesses, and one school within the defined boundary line of 150m from the transmission line. Based on these observations, the proposed project will cross 9 rivers, 30 settlements in Goa, as well as mangroves and agricultural regions. More information is available in the <a href="https://docs.google.com/document/d/1G3W7Wli9VXMppMcWlcoJdl2VP1G2k3im70b25YQIvBU/edit?usp=sharing" target="_blank">research report to CEC.</a></p></p><p> There is anecdotal evidence from villagers who live near the old 220 and 110 k transmission lines to say that the power lines were viewed as dangerous. On one account a villager stated that one of the local cattle was electrocuted as one power line snapped during a monsoon storm. Villagers who have their fields below the lines fear for their lives and often prefer to not work in the fields that are below the line.</p><p>The villagers fear that there will be an increase in risk with the development of the 400 k line which is also set to move through the villages bordering the sanctuary.</p><p>In another incident, an areca nut farmer stated that his entire farm as well as a few neighbouring farms will have to be cut down as the line would pass over their farms. The farmers would then have to apply for compensation from the government, however this compensation will not be able to support them financially as it does not compare to the value of their farms.</p> ',
+			description: '<p>There are 18 communities with ten or more structures each, 13 houses of worship, including the ASI-protected Tambi Surla temple, at least 11 businesses, and one school within the defined boundary line of 150m from the transmission line. Based on these observations, the proposed project will cross 9 rivers, 30 settlements in Goa, as well as mangroves and agricultural regions. More information is available in the <a href="https://docs.google.com/document/d/1G3W7Wli9VXMppMcWlcoJdl2VP1G2k3im70b25YQIvBU/edit?usp=sharing" target="_blank">research report to CEC.</a></p></p><p> There is anecdotal evidence from villagers who live near the old 220 and 110 k transmission lines to say that the power lines were viewed as dangerous. On one account a villager stated that one of the local cattle was electrocuted as one power line snapped during a monsoon storm.</p> ',
             location: {
                 center: [74.272112, 15.365910],
                 zoom: 10,
@@ -347,7 +421,101 @@ var config = {
                      opacity: 0,
                      //duration: 5000
                  },
+				 {
+                     layer: 'sangod',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'railexpansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingrail',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'towers',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+			],
+            onChapterExit: [
+				/*{
+                     layer: 'transline-villages',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'transmission-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },*/
+				{
+                     layer: 'towers',
+                     opacity: 0,
+                     //duration: 5000
+                 }, 
+				
 				 
+				 ]
+        },
+		{
+            id: 'tlinesImpact',
+            alignment: 'right',
+            hidden: false,
+            //title: 'Impact of Expansion',
+            image: '',
+            legend: '<span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #72f8ed; "></span><span> Impacted Villages</span></br><span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #ecc14b; "></span><span> Proposed Transmission towers</span>',
+			description: '<p>Villagers who have their fields below the lines fear for their lives and often prefer to not work in the fields that are below the line.</p><p>The villagers fear that there will be an increase in risk with the development of the 400 k line which is also set to move through the villages bordering the sanctuary.</p><p>In another incident, an areca nut farmer stated that his entire farm as well as a few neighbouring farms will have to be cut down as the line would pass over their farms. The farmers would then have to apply for compensation from the government, however this compensation will not be able to support them financially as it does not compare to the value of their farms.</p> ',
+            location: {
+                center: [74.272112, 15.365910],
+                zoom: 10,
+                pitch: 20,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            mapInteractive: false,
+            callback: '',
+            onChapterEnter: [
+			{
+                     layer: 'bounds',
+                     opacity: 0.4,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingline',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				{
+                     layer: 'alternate',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'transline-villages',
+                     opacity: 1,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'transmission-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'sangod',
+                     opacity: 0,
+                     //duration: 5000
+                 },
 				 {
                      layer: 'railexpansion',
                      opacity: 0,
@@ -389,7 +557,6 @@ var config = {
 				 
 				 ]
         },
-		
 		{
             id: 'railways',
             alignment: 'right',
@@ -475,7 +642,7 @@ var config = {
             title: 'Proposed Railway Double tracking',
             //image: './path/to/image/source.png',
 			legend:'<span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #91732b; "></span><span> Existing Railway Line</span></br><span style="width: 15px; height: 15px; margin:auto; display: inline-block; border: 1px solid gray; vertical-align: middle; border-radius: 2px; background: #e14141; "></span><span> Proposed Double tracking</span>',
-            description: '<p>The state leadership cited increase in tourism as the primary purpose behind double-tracking but the national sagarmala project suggests that the expansion of Mormugao Port Trust’s coal handling capacity to be the real reason for the double tracking proposal. The issues raised by concerned citizens include health and pollution which will be a result of the transportation of coal in open carriages via the double tracks. </p>',
+            description: '<p>The state leadership cited increase in tourism as the primary purpose behind double-tracking but <a href="https://en.wikipedia.org/wiki/Sagar_Mala_project" target="_blank">The Sagarmala Programme</a> suggests that the expansion of Mormugao Port Trust’s coal handling capacity to be the real reason for the double tracking proposal. The issues raised by concerned citizens include health and pollution which will be a result of the transportation of coal in open carriages via the double tracks. </p>',
             location: {
                 center: [74.281697, 15.333313],
                 zoom: 11,
@@ -762,7 +929,72 @@ var config = {
             hidden: false,
             title: 'Conclusion',
             //image: './path/to/image/source.png',
-            description: '<p>What is happening at Mollem now ? </p>',
+            description: '<p>As of March 1st 2023, almost 3 years after the MoEF&CC first provided forest clearance permission to these three projects, the story of the projects through Mollem is not yet complete.</p><p>The transmission line: The Supreme Court decreed that the contractor must use the existing alignment through Mollem, from 1996, for the new 400kV line. They are not permitted to destroy the pristine undisturbed forest area within Mollem. The sub-station has also been relocated from Sangod, where the trees were felled illegally, to a site at Dharbondara.</p>',
+            location: {
+                center: [74.272112, 15.365910],
+                zoom: 10.5,
+                pitch: 20,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            mapInteractive: false,
+            callback: '',
+            onChapterEnter: [
+			{
+                     layer: 'bounds',
+                     opacity: 0.5,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingline',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'railexpansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'proposedrailwayclearance',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'nh4a-expansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'originalhighway',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 {
+                     layer: 'existingrail',
+                     opacity: 0,
+                     //duration: 5000
+                 }
+			],
+            onChapterExit: [
+				
+				 {
+                     layer: 'railexpansion',
+                     opacity: 0,
+                     //duration: 5000
+                 },
+				 
+				 ]
+        },
+		
+		{
+            id: 'Conclusion',
+            alignment: 'right',
+            hidden: false,
+            //title: 'Conclusion',
+            //image: './path/to/image/source.png',
+            description: '<p>The railway line: The Supreme Court cancelled the wildlife clearances provided to the Railways to construct the double-track through Mollem. The Railways have now commissioned the Wildlife Institute of India to conduct a new study. There will be no double-tracking through Mollem until that report is published, leading the way to further clearance applications and more legal action.</p><p>The highway: The Supreme Court is yet to decide on the matter.</p><p>We will create an updated version of this storymap once there are more updates. However, the citizens of Goa continue with their battle to save Mollem from destructive development. For more information, follow @mymollem.goa on Instagram or sign up for updates at this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkW7v-iYgqMW7-oZxTy9YXti2CKfJTScvu4zH09__QJbXkWA/viewform" target="_blank">link</a>. </p>',
             location: {
                 center: [74.272112, 15.365910],
                 zoom: 10.5,
@@ -820,5 +1052,7 @@ var config = {
 				 
 				 ]
         }
+		
+		
     ]
 };
